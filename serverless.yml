@@ -2,7 +2,7 @@ service: alexa-astronomie-skill
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   region: eu-west-1
 
 package:
@@ -12,10 +12,10 @@ package:
 
 functions:
   flash-briefing:
-    handler: build/flash-briefing.handler
+    handler: dist/flash-briefing.handler
     package:
       include:
-        - build/flash-briefing*
+        - dist/flash-briefing*
     events:
       - http:
           path: today
