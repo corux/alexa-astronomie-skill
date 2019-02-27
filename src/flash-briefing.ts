@@ -4,7 +4,7 @@ import * as cheerio from "cheerio";
 import * as iconv from "iconv-lite";
 
 function parseGermanDate(text: string): Date {
-  const match = text.match(/.*([0-9]{1,2})\.(.*)([0-9]{4})/);
+  const match = text.match(/[^0-9]*([0-9]{1,2})\.(.*)([0-9]{4})/);
   if (match) {
     const germanMonths = [
       "Januar", "Februar", "März",
