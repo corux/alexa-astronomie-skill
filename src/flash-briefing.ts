@@ -19,6 +19,13 @@ function parseGermanDate(text: string): Date {
   }
 }
 
+function fixText(text: string): string {
+  return text
+    .replace(/([0-9]{1,2})¼/g, "$1:15")
+    .replace(/([0-9]{1,2})½/g, "$1:30")
+    .replace(/([0-9]{1,2})¾/g, "$1:45");
+}
+
 const handler: Handler = async () => {
   const url = "https://news.astronomie.info/hah?printpage=";
   const response = await axios.get(url, {
@@ -29,7 +36,7 @@ const handler: Handler = async () => {
   const body = iconv.decode(response.data, encoding);
   const $ = cheerio.load(body);
   const title = $("h3").text();
-  const text = $("h3 + *").text();
+  const text = fixText($("h3 + *").text());
   const date = parseGermanDate(title);
 
   return {
