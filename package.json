@@ -21,7 +21,7 @@
     "@types/aws-lambda": "8.10.20",
     "@types/jest": "24.0.9",
     "@types/node": "10.12.29",
-    "ask-cli": "1.6.2",
+    "ask-cli": "1.6.3",
     "axios": "0.18.0",
     "cheerio": "1.0.0-rc.2",
     "class.extend": "0.9.2",
