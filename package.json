@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "8.10.20",
-    "@types/jest": "24.0.9",
+    "@types/jest": "24.0.10",
     "@types/node": "10.12.29",
     "ask-cli": "1.6.2",
     "axios": "0.18.0",
