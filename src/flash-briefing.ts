@@ -1,5 +1,5 @@
 import { Handler } from "aws-lambda";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import * as cheerio from "cheerio";
 import * as iconv from "iconv-lite";
 
@@ -26,12 +26,28 @@ function fixText(text: string): string {
     .replace(/([0-9]{1,2})¾/g, "$1:45");
 }
 
+async function retrieveData(): Promise<AxiosResponse<any>> {
+  let retryCount = 0;
+  const shouldRetry = () => retryCount < 3;
+  while (shouldRetry()) {
+    retryCount++;
+    try {
+      const url = "https://news.astronomie.info/hah?printpage=";
+      const response = await axios.get(url, {
+        responseType: "arraybuffer",
+        timeout: 2000,
+      } as any);
+      return response;
+    } catch (error) {
+      if (!shouldRetry()) {
+        throw error;
+      }
+    }
+  }
+}
+
 const handler: Handler = async () => {
-  const url = "https://news.astronomie.info/hah?printpage=";
-  const response = await axios.get(url, {
-    responseType: "arraybuffer",
-    timeout: 2000,
-  } as any);
+  const response = await retrieveData();
   const encoding = response.headers["content-type"].match(/charset=(.*$)/)[1];
   const body = iconv.decode(response.data, encoding);
   const $ = cheerio.load(body);
