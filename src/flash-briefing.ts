@@ -35,7 +35,7 @@ async function retrieveData(): Promise<AxiosResponse<any>> {
       const url = "https://news.astronomie.info/hah?printpage=";
       const response = await axios.get(url, {
         responseType: "arraybuffer",
-        timeout: 2000,
+        timeout: 1800,
       } as any);
       return response;
     } catch (error) {
