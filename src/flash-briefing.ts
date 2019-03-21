@@ -46,7 +46,13 @@ async function retrieveData(): Promise<AxiosResponse<any>> {
   }
 }
 
+let cache;
+
 const handler: Handler = async () => {
+  if (cache && new Date(cache.updateDate).toDateString() === new Date().toDateString()) {
+    return cache;
+  }
+
   const response = await retrieveData();
   const encoding = response.headers["content-type"].match(/charset=(.*$)/)[1];
   const body = iconv.decode(response.data, encoding);
@@ -55,13 +61,17 @@ const handler: Handler = async () => {
   const text = fixText($("h3 + *").text());
   const date = parseGermanDate(title);
 
-  return {
+  const result = {
     mainText: text,
     redirectionUrl: "https://news.astronomie.info/hah",
     titleText: title,
     uid: date.toISOString(),
     updateDate: date.toISOString(),
   };
+
+  cache = result;
+
+  return result;
 };
 
 export { handler };
