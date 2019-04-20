@@ -21,9 +21,10 @@ function parseGermanDate(text: string): Date {
 
 function fixText(text: string): string {
   return text
-    .replace(/([0-9]{1,2})¼/g, "$1:15")
-    .replace(/([0-9]{1,2})½/g, "$1:30")
-    .replace(/([0-9]{1,2})¾/g, "$1:45");
+    .replace(/([0-9]{1,2})¼\s*Uhr/g, "$1:15")
+    .replace(/([0-9]{1,2})½\s*Uhr/g, "$1:30")
+    .replace(/([0-9]{1,2})¾\s*Uhr/g, "$1:45")
+    .replace(/([0-9]{1,2})([¼½¾])/g, "$1 $2");
 }
 
 async function retrieveData(): Promise<AxiosResponse<any>> {
