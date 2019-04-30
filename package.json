@@ -13,6 +13,7 @@
     "build:dev": "npm run build -- --mode development --watch",
     "build:prod": "npm run lint && npm run build -- --mode production",
     "create-s3-bucket": "aws s3 ls s3://alexa-astronomie-skill > /dev/null 2>&1 || aws s3 mb s3://alexa-astronomie-skill --region eu-west-1",
+    "convert-assets": "rsvg-convert -w 108 -o assets/icon108.png assets/icon.svg && rsvg-convert -w 512 -o assets/icon512.png assets/icon.svg",
     "deploy:assets": "aws s3 sync ./assets s3://alexa-astronomie-skill/ --acl public-read",
     "deploy:prod": "serverless deploy --stage production",
     "deploy:dev": "serverless deploy --stage development"
