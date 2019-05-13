@@ -28,14 +28,14 @@
     "cross-env": "5.2.0",
     "iconv-lite": "0.4.24",
     "jest": "24.8.0",
-    "serverless": "1.41.1",
+    "serverless": "1.42.2",
     "ts-jest": "24.0.2",
     "ts-loader": "5.4.5",
     "ts-node": "8.1.0",
     "tslint": "5.16.0",
     "typescript": "3.4.5",
     "virtual-alexa": "0.7.2",
-    "webpack": "4.30.0",
+    "webpack": "4.31.0",
     "webpack-command": "0.4.2"
   }
 }
