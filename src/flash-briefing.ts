@@ -24,7 +24,8 @@ function fixText(text: string): string {
     .replace(/([0-9]{1,2})¼\s*Uhr/g, "$1:15")
     .replace(/([0-9]{1,2})½\s*Uhr/g, "$1:30")
     .replace(/([0-9]{1,2})¾\s*Uhr/g, "$1:45")
-    .replace(/([0-9]{1,2})([¼½¾])/g, "$1 $2");
+    .replace(/([0-9]{1,2})([¼½¾])/g, "$1 $2")
+    .replace(/([0-9]{1,2}\.)\/([0-9]{1,2}\.)/g, "$1 bis $2");
 }
 
 async function retrieveData(): Promise<AxiosResponse<any>> {
