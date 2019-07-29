@@ -19,7 +19,7 @@
     "deploy:dev": "serverless deploy --stage development"
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.30",
+    "@types/aws-lambda": "8.10.31",
     "@types/jest": "24.0.15",
     "@types/node": "10.14.1",
     "ask-cli": "1.7.9",
@@ -28,14 +28,14 @@
     "cross-env": "5.2.0",
     "iconv-lite": "0.5.0",
     "jest": "24.8.0",
-    "serverless": "1.48.2",
+    "serverless": "1.48.4",
     "ts-jest": "24.0.2",
     "ts-loader": "6.0.4",
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
     "typescript": "3.5.3",
     "virtual-alexa": "0.7.2",
-    "webpack": "4.36.1",
+    "webpack": "4.38.0",
     "webpack-command": "0.4.2"
   }
 }
