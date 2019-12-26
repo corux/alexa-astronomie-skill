@@ -2,7 +2,7 @@ service: alexa-astronomie-skill
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   region: eu-west-1
   memorySize: 128
 
