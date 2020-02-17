@@ -19,10 +19,10 @@
     "deploy:dev": "serverless deploy --stage development"
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.40",
+    "@types/aws-lambda": "8.10.41",
     "@types/jest": "25.1.2",
     "@types/node": "12.12.22",
-    "ask-cli": "1.7.22",
+    "ask-cli": "1.7.23",
     "axios": "0.19.2",
     "cheerio": "1.0.0-rc.3",
     "cross-env": "7.0.0",
@@ -35,7 +35,7 @@
     "tslint": "5.20.1",
     "typescript": "3.7.5",
     "virtual-alexa": "0.7.5",
-    "webpack": "4.41.5",
+    "webpack": "4.41.6",
     "webpack-command": "0.5.0"
   }
 }
