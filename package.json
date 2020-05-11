@@ -27,7 +27,7 @@
     "cheerio": "1.0.0-rc.3",
     "cross-env": "7.0.2",
     "iconv-lite": "0.5.1",
-    "jest": "25.5.4",
+    "jest": "26.0.1",
     "serverless": "1.70.0",
     "ts-jest": "25.5.1",
     "ts-loader": "7.0.3",
