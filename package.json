@@ -19,14 +19,14 @@
     "deploy:dev": "serverless deploy --stage development"
   },
   "devDependencies": {
-    "@types/aws-lambda": "8.10.57",
-    "@types/jest": "26.0.3",
+    "@types/aws-lambda": "8.10.59",
+    "@types/jest": "26.0.4",
     "@types/node": "12.12.22",
-    "ask-cli": "2.11.1",
+    "ask-cli": "2.11.2",
     "axios": "0.19.2",
     "cheerio": "1.0.0-rc.3",
     "cross-env": "7.0.2",
-    "iconv-lite": "0.6.1",
+    "iconv-lite": "0.6.2",
     "jest": "26.1.0",
     "serverless": "1.74.1",
     "ts-jest": "26.1.1",
