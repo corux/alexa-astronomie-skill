@@ -28,7 +28,7 @@
     "cross-env": "7.0.2",
     "iconv-lite": "0.6.2",
     "jest": "26.4.2",
-    "serverless": "1.82.0",
+    "serverless": "2.0.0",
     "ts-jest": "26.3.0",
     "ts-loader": "8.0.3",
     "ts-node": "9.0.0",
