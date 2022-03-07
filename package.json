@@ -22,7 +22,7 @@
     "@types/aws-lambda": "8.10.68",
     "@types/jest": "26.0.19",
     "@types/node": "12.12.22",
-    "ask-cli": "2.22.0",
+    "ask-cli": "2.22.2",
     "axios": "0.21.1",
     "cheerio": "1.0.0-rc.5",
     "cross-env": "7.0.3",
