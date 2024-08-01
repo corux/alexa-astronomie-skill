@@ -23,7 +23,7 @@
     "@types/jest": "26.0.19",
     "@types/node": "12.12.22",
     "ask-cli": "2.22.0",
-    "axios": "0.21.1",
+    "axios": "1.7.3",
     "cheerio": "1.0.0-rc.5",
     "cross-env": "7.0.3",
     "iconv-lite": "0.6.2",
